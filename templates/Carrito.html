@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carrito.css' %}">
+    <script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d6c2ac0aaf.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="{% static 'images/ATTIRE FAVICON.png' %}" type="image/x-icon">
+    <title>Carrito de compras</title>
+</head>
+<body>
+    <header class="d-flex align-items-center bg-black">
+        <a href="{% url 'inicio' %}" class="enlaces text-white ms-3 fs-4 fs-sm-6">
+            <i class="fa-sharp fa-solid fa-circle-arrow-left me-3"></i>
+            Salir
+        </a>
+
+        <div id="caja-img" class="h-100 mx-auto col-7 col-lg-3 col-xxl-4">
+            <img src="{% static 'images/Logo-removebg-preview.png' %}" alt="" class="h-100 col-12" id="img-empresa">
+        </div>
+    </header>
+    
+    <main class="container-fluid">
+        <h1 class="display-6 pb-2 text-center mt-4 fw-bold">MI CARRITO</h1>
+        <div class="row col-lg-12">
+            <section class="col-lg-12 d-flex justify-content-between gap-5 flex-row mt-3 flex-wrap">
+                {% if request.session.carrito.items %}
+                <!--Tabla de productos que estan en el carrito-->
+                <table class="table tabla-productos text-center table-bordered">
+                    <thead class="color-cabeceras">
+                        <tr>
+                            <th scope="col">Foto de Producto</th>
+                            <th scope="col">Nombre de Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Eliminar Producto</th>
+                        </tr>
+                    </thead>
+                    {% for key, value in request.session.carrito.items %}
+                    <tbody>
+                        <tr>
+                            <td class="centrar-texto-producto"><img class="imagen" src="{{ value.foto.url }}"></td>
+                            <td class="centrar-texto-producto">{{ value.nombre }}</td>
+                            <td class="centrar-texto-producto">{{ value.precio }} COP</td>
+                            <td class="centrar-texto-producto celda-cantidad">
+                                <p class="texto-cantidad">{{ value.cantidad }}</p>
+                                <div class="caja-botones">
+                                    <a href="{% url 'sumar_prod' value.producto_id %}"><button class="btn-cantidad">+</button></a>
+                                    <a href="{% url 'restar_prod' value.producto_id %}"><button class="btn-cantidad">-</button></a>
+                                </div>
+                            </td>
+                            <td class="centrar-texto-producto"><a href="{% url 'eliminar_prod' value.producto_id %}" type="submit" class="btn btn-danger">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+                <!--Fin tabla de productos que estan en el carrito-->
+
+                <!--Seccion de precios-->
+                <div class="col-12 col-lg-4 d-flex flex-column align-items-center seccion-precios">
+                    <h4 class="display-6 fw-bold titulo-precios">IVA (19%):</h4>
+                    <p class="texto-precios">{{ total_iva_carrito }}</p>
+                    <h4 class="display-6 fw-bold titulo-precios">TOTAL:</h4>
+                    <p class="texto-precios">$ {{ total_a_pagar_carrito }}</p>
+                    <div class="row d-flex flex-row justify-content-around align-items-center mt-1 botones-acciones">
+                        <div class="col">
+                            <a href="{% url 'entrega' %}"><button type="submit" class="btn1">Comprar ahora</button></a>
+                        </div>
+                        <div class="col">
+                            <a href="{% url 'limpiar_car' %}"><button type="submit" class="btn2">Limpiar Carrito</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin seccion de precios-->
+                {% else %}
+
+                <!--Seccion de carrito vacio-->
+                <div class="col-12 col-lg-5 d-flex flex-column mb-5 cesta-vacia">
+                    <hr class="mb-3">
+                    <div class="div-productos w-100 border border-1 border-secondary d-flex flex-column justify-content-center">
+                        <div class="icons mx-auto my-2">
+                            <i class="fa-solid fa-face-frown display-3"></i>
+                            <i class="fa-solid fa-cart-shopping display-3"></i>
+                        </div>
+                        <h2 class="text-center w-100 fw-bold display-5 my-2">Tu carrito está vacío.</h2>
+                        <p class="text-center">Ve a nuestra tienda y agrega tus productos favoritos al carrito.</p>
+                        <a href="{% url 'inicio' %} " class="boton-carrito btn rounded-pill mb-3 w-75 mx-auto ">Ir a la tienda.</a>
+                    </div>
+                </div>
+                <!--Fin seccion de carrito vacio-->
+                {% endif %}
+            </section>
+        </div>
+    </main>
+    <script src="{% static 'Bootstrap/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
+</body>
+</html>

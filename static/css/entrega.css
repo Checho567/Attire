@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.pie{
+    margin-top: 53.5px;
+}
+
+.btn_act_modal{
+    margin-top: 60px;
+}
+
+.boton-gradient{
+    background: linear-gradient(45deg, #0063BB, #FF8D1A);
+    color: #FFF;
+}
+
+
+.card_edit{
+    margin-top: 60px;
+}
+
+.titulo-card-entrega{
+    font-size: 25px;
+}
+
+h1{
+    font-size: 40px;
+    color: #0063BB;
+    animation: cambiar-color-texto 5s infinite;
+}
+
+.btn-elim-canc{
+    background-color: #FF3030;
+    color: #FFF;
+}
+
+.btn-elim-canc:hover{
+    background-color: #FF3030;
+    color: #FFF;
+}
+
+.texto-resultado{
+    color: #0063BB;
+    font-size: 18px;
+}
+
+.sin-info-back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sin-info{
+    width: 50%;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 5px solid #0063BB;
+    animation: cambiar-color-borde 5s infinite;
+}
+
+.texto_no_datos{
+    font-size: 40px;
+    color: #0063BB;
+    animation: cambiar-color-texto 5s infinite;
+}
+
+.bajar-boton{
+    margin-top: 50px;
+}
+
+.btn-terminar-compra{
+    width: 100px;
+    height: 60px;
+    background: linear-gradient(45deg, #0063BB, #FF8D1A);
+    text-decoration: none;
+    color: #FFF;
+}
+
+.btn-terminar-compra:hover{
+    color: #FFF;
+}
+
+@keyframes cambiar-color-borde {
+    0%{
+        border: 5px solid #0063BB;
+    }
+    33%{
+        border: 5px solid #FF8D1A;
+    }
+    66%{
+        border:5px solid #cecdba;
+    }
+    100%{
+        border: 5px solid #0063BB;
+    }
+
+}
+
+@keyframes cambiar-color-texto {
+    0%{
+        color: #0063BB;
+    }
+    33%{
+        color: #FF8D1A;
+    }
+    66%{
+        color: #cecdba;
+    }
+    100%{
+        color: #0063BB;
+    }
+
+}

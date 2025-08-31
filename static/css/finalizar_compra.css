@@ -1,0 +1,44 @@
+.contenido{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.tabla-productos{
+    width: 1000px;
+    border-collapse: separate;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+/*CABECERA DE LA TABLA*/
+
+.thead-cabeza{
+    background: linear-gradient(45deg, #0063BB, #FF8D1A);
+    color: #FFF;
+}
+
+.header-tabla{
+    font-size: 20px;
+}
+
+
+a .btn-terminar-compra{
+    width: 100px;
+    height: 60px;
+    background: linear-gradient(45deg, #0063BB, #FF8D1A);
+    text-decoration: none;
+    color: #FFF;
+}
+
+.imagen{
+    width: 100px;
+}
+
+a .btn-terminar-compra:hover{
+    color: #FFF;
+}

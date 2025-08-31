@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient(to right bottom, #cecdba, rgb(202, 238, 250));
+}
+.marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+}
+.divform {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 50%;
+}
+.registro {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 439px;
+    width: 552px;
+}
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 90%;
+}
+.registro .formRegistro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #efebe7;
+    box-shadow: 10px 10px 5px 3px #24282b;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.registro form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90%;
+    width: 90%;
+}
+
+.datos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+.InfoPers, .InfoCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 45%;
+}
+#boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], select {
+    border-radius: 15px;
+    font-size: 18px;
+    width: 92%;
+    padding: 10px;
+    border: none;
+    outline-style: none;
+    appearance: none;
+}
+#tipo_doc{
+    min-width: 100%;
+}
+.button {
+    border: none;
+    width: 70%;
+    color: white;
+    font-size: 20px;
+    background-color: #0063bb;
+    padding: 15px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+a{
+    color: #0063bb;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 950px){
+
+    input[type="text"], input[type="password"], input[type="number"], input[type="email"], select {
+        border-radius: 15px;
+        font-size: 15px;
+        min-width: 70%;
+        padding: 10px;
+        border: none;
+    }
+    .button {
+        border: none;
+        width: 70%;
+        color: white;
+        font-size: 10x;
+        background-color: #0063bb;
+        padding: 15px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    .alerta{
+        text-align: center;
+        color: rgb(223, 35, 35);
+        font-weight: bold;
+    }
+    .sucess{
+        text-align: center;
+        color: #0063bb;
+        font-weight: bold;
+    }
+
+}
+

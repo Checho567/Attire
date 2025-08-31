@@ -1,0 +1,21 @@
+@font-face {
+    font-family:A-space ;
+    src: url(../Fonts/A-Space\ Regular\ Demo.otf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+body{
+    background-color: #F3F3F1;
+}
+h1, h2{
+    font-family: A-space;
+}
+p{
+    font-family: Montserrat;
+}
+#divimagen{
+    height: 22em;
+    width: 35em;
+}

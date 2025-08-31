@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/403.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/ATTIRE FAVICON.png' %}" type="image/x-icon">
+    <title>403 ERROR</title>
+</head>
+<body>
+    <div class="container">
+        <div class=" row flex-column align-items-center">
+            <div class="img-403">
+                <img src="{% static 'images/error403.jpg' %}" alt="" class="w-100 h-100">
+            </div>
+
+            <p class="fw-bold fs-4">Lo sentimos, no tienes acceso a este recurso. 
+                Esto puede ser porque no estás autorizado para verlo
+                o porque no has iniciado sesion correctamente.
+            </p>
+            <a href="{% url 'index' %}" class="btn btn-success mb-3">Regresar a la tienda</a>
+        </div>
+    </div>
+
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

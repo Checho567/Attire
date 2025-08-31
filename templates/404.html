@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/404.css' %}">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css'}">
+    <link rel="shortcut icon" href="{% static 'images/ATTIRE FAVICON.png' %}" type="image/x-icon">
+    <title>404 Error</title>
+
+</head>
+<body>
+    <div id="div_principal" class="container-fluid">
+        <div class="row d-flex flex-column align-items-center gap-column-2">
+            <div class="col-8" id="imagen-404">
+                <img src="{% static 'images/404.jpg' %}" alt="" class="w-100 h-100">
+            </div>
+            <h1 class="text-center display-6 fw-bold">Lamentablemente no encontramos tu solicitud 😔</h1>
+            <a href="{% url 'index' %}" class="btn btn-primary rounded-pill 
+            col-12 col-lg-2 col-md-4 col-sm-8">Volver a la tienda</a>
+        </div>
+
+    </div>
+    
+    <script src="{% static 'Bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

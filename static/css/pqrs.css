@@ -1,0 +1,34 @@
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url("../fonts/websymbols-regular-webfont.eot");
+    src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../fonts/websymbols-regular-webfont.woff") format('woff'),
+        url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+:root{
+    --fuenteprincipal:Montserrat;
+    --negro:#131414;
+    --gris:#cecdba;
+    --azul:#0063bb;
+    --naranja:#FF8D1A;
+    --blanco:rgb(255, 255, 255);
+}
+header{
+    height: 6.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+}
+
+h1{
+    font-family: var(--fuenteprincipal);
+}

@@ -1,0 +1,327 @@
+/*Estilos generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url("{%' static fonts/websymbols-regular-webfont.eot' %}");
+    src: url("{%' static fonts/websymbols-regular-webfont.eot?#iefix' %}") format('embedded-opentype'),
+        url("{%' static fonts/websymbols-regular-webfont.woff' %}") format('woff'),
+        url("{%' static fonts/websymbols-regular-webfont.ttf' %}") format('truetype'),
+        url("{%' static fonts/websymbols-regular-webfont.svg#WebSymbolsRegular' %}") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url("../Fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+:root{
+    --fuenteprincipal:Montserrat;
+    --negro:#131414;
+    --gris:#cecdba;
+    --azul:#0063bb;
+    --naranja:#FF8D1A;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+/*Final de estilos generales*/
+
+/*Principio de la cabecera*/
+header{
+    background-color: var(--negro);
+    height: 8rem;
+    box-shadow: 0 -5px var(--gris) inset;
+    overflow: hidden;
+}
+
+
+header a{
+    text-decoration: none;
+    color: var(--gris);
+}
+header ul{
+    font-size: 18px;
+    justify-content: space-around;
+}
+header i{
+    font-size: 1.4em;
+}
+header .enlaces{
+    display: block;
+    background:linear-gradient(to right, #0063bb 0%, #0f80e4 50%, #2692f0 100%);
+}
+#header-wrap{
+    margin: 0px auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 100%;
+}
+
+#redessociales i{
+    transition: all 400ms;
+    animation: movimientoredes linear 1s;
+}
+@keyframes movimientoredes{
+    0%{
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#youtube:hover{
+    background-color: rgb(236, 19, 19);
+    box-shadow: 0px 0px 20px rgb(245, 0, 0);
+    transform: scale(1.3);
+}
+
+#facebook:hover{
+    background-color: #0063bb;
+    box-shadow: 0px 0px 20px var(--azul);
+    transform: scale(1.3);
+}
+#instagram:hover{
+    background-color: rgb(201, 68, 201);
+    box-shadow: 0px 0px 20px rgb(201, 68, 201);
+    transform: scale(1.3);
+}
+#twitter:hover{
+    background-color: #2692f0;
+    box-shadow: 0px 0px 20px #2692f0;
+    transform: scale(1.3);
+}
+
+@keyframes movimientoimagen{
+    0%{
+        transform: translateY(-400%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#logo-empresa img{
+    height: 7em;
+    width: 22em;
+    cursor: pointer;
+    animation: movimientoimagen 2s linear;
+    transition: all 400ms;
+}
+#logo-empresa img:hover{
+    transform: scale(1.04);
+    filter: drop-shadow(0px 0px 5px var(--azul));
+}
+#botones{
+    font-family: var(--fuenteprincipal);
+    animation: movimientobotones 2s linear;
+}
+@keyframes movimientobotones {
+    0%{
+        transform: translateX(400%);
+        opacity: 0;
+        background: transparent;
+    }
+
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#botones a{
+    
+    text-decoration-line: none;
+    margin-right: 3%;
+    font-size: 15px;
+    text-align: center;
+    transition: all 500ms;
+}
+
+#botones a:hover{
+    transform: scale(1.25);
+    box-shadow: 0px 0px 20px var(--azul), 0px 0px 3px #fff inset;
+    font-size: 1em;
+    animation: 3s movimientofondo linear infinite;
+}
+
+@keyframes movimientofondo {
+    0%{
+        background-position: 0%;
+    }
+
+    100%{
+        background-position: -400px;
+    }
+}
+
+/*Final de la cabecera*/
+
+/*Inicio del contenido*/
+#informacion{
+    grid-template-columns: repeat(2, 1fr) 3fr;
+    grid-template-rows: 1fr;
+    font-size: 20px;
+    font-family: var(--fuenteprincipal);
+    text-transform: uppercase;
+    column-gap: 10px;
+}
+#explorartienda{
+    height: 2em;
+    line-height: 2em;
+    grid-column: 1 / 3;
+    margin-left: 2em;
+    overflow: hidden;
+    transition: 400ms;
+}
+#explorartienda:hover{
+    background-color: var(--naranja) !important;
+}
+#slider{
+    height: 200px;
+    grid-column: 3 / 7;
+    grid-row: 1 / 5;
+}
+#Mision h2{
+    font-family: var(--fuenteprincipal);
+    color: var(--azul);
+}
+#Vision h2{
+    color: var(--naranja);
+}
+/*Inicio tarjetas*/
+#accion{
+    font-family: var(--fuenteprincipal);
+}
+#info{
+    min-height: 100px;
+    max-height: 200px;
+    background-image: url("../images/constelacion.png");
+    animation: 10s infinite alternate backgroundimage;
+}
+#info h1{
+    line-height: 100px;
+    transition: all 400ms;
+}
+@keyframes backgroundimage {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+#info:hover h1{
+    transform: scale(1.2);
+}
+#accion #article1:hover p{
+    animation: movtexto 1s ease-in-out;
+}
+#accion #article2:hover p{
+    animation: movtexto2 1s ease-in-out;
+}
+#accion #article3:hover p{
+    animation: movtexto 1s ease-in-out;
+}
+@keyframes movtexto {
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-400%);
+    }
+    50%{
+        transform: translateX(-80%);
+    }
+    100%{
+        transform: translateX(0%);
+        font-weight: bold;
+
+    }
+}
+@keyframes movtexto2{
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(400%);
+    }
+    50%{
+        transform: translateX(80%);
+    }
+    100%{
+        transform: translateX(0%);
+        font-weight: bold;
+    }
+}
+.articulos{
+    transition: all 400ms;
+}
+#article1:hover{
+    background-color: var(--naranja);
+    color: white;
+}
+#article2:hover{
+    background-color: var(--azul);
+    color: white;
+}
+#article3:hover{
+    background-color: var(--gris);
+    color: var(--negro);
+}
+
+/*Final tarjetas*/
+/*Final del contenido*/
+
+#wrap{
+    height: auto;
+}
+
+footer{
+    min-height: 100px;
+    margin-top: auto;
+    background-color: var(--negro);
+    color: var(--azul);
+    font-size: 1.3em;
+}
+footer > ul > li{
+    cursor: pointer;
+    font-family: var(--fuenteprincipal);
+    transition: all 400ms;
+}
+footer > ul > li:hover{
+    color: var(--naranja);
+    text-shadow: 0px 0px 10px var(--naranja);
+}
+
+
+footer ul{
+    list-style: none;
+}
+
+p #a1-informacion{
+    text-align: center;
+    text-transform: capitalize;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+@media (max-width: 500px) {
+    #informacion{
+        display: flex;
+        flex-direction: column;
+    }
+}

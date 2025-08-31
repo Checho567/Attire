@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/505.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/ATTIRE FAVICON.png' %}" type="image/x-icon">
+    <title>Error 505</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex flex-column gap-2 h-50 align-items-center">
+            <h2 class="text-center fw-bold">!OOPS!</h2>
+            <div id="divimagen" class="">
+                <img src="{% static 'images/505.jpeg' %}" alt="" class="h-100 w-100">
+            </div>
+            <h1 class="text-center fw-bold">ERROR 505</h1>
+            <p class="fw-bold fs-4">¡Hola! Lamentablemente, algo salió mal en nuestro servidor y 
+                no pudimos completar tu solicitud. Por favor, intenta de nuevo más tarde o contáctanos para 
+                que podamos ayudarte a resolver el problema. ¡Gracias por tu comprensión y paciencia!
+            </p>
+            <a href="{% url 'index' %}" class="btn btn-primary">Regresar a la tienda</a>
+        </div>
+    </div>
+    <link rel="stylesheet" href="Bootstrap/js/bootstrap.min.js">
+</body>
+</html>

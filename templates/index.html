@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d6c2ac0aaf.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="{% static 'images/ATTIRE FAVICON.png' %}" type="image/x-icon">
+    <title>Pagina de inicio</title>
+</head>
+<body>
+    <!--Inicio de la cabecera-->
+    <header  id="cabecera" class="cabecera border-2 border-bottom border-white col-12 w-100 ">
+        <div class=" col-11 d-flex justify-content-between" id="header-wrap">
+            <div id="redessociales" class="text-center text-white col-3">
+                <ul class="d-flex flex-wrap justy-content-around g-3">
+                    <li class="iconos list-unstyled ">
+                        <a href="https://es-la.facebook.com/login/device-based/regular/login/" target="_blank"><i id="facebook" class="fa-brands fa-facebook rounded-circle text-white"></i></a>
+                    </li>
+                    <li class="iconos list-unstyled ">
+                        <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fdirect%2Finbox%2F%3F__coig_login%3D1" target="_blank"><i id="instagram" class="fa-brands fa-instagram rounded-circle text-white"></i></a>
+                    </li>
+                    <li class="iconos list-unstyled ">
+                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Des" target="_blank"><i id="twitter" class="fa-brands fa-twitter rounded-circle text-white"></i></a>
+                    </li>
+                    <li class="iconos list-unstyled ">
+                        <a href="https://www.youtube.com" target="_blank"><i id="youtube" class="fa-brands fa-youtube rounded text-white"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="logo-empresa" class= "text-white text-center col-4"><img src="{% static 'images/Logo-removebg-preview.png' %}" alt=""></div>
+            <div id="botones" class="d-flex col-4 justify-content-around flex-wrap">
+                <a  href="{% url 'login' %}" class="enlaces text-white  px-4 p-2 py-3 rounded-pill"> Iniciar sesion</a>
+            </div>
+        </div>
+    </header>
+    <!--Final de la cabecera-->
+    <!--Inicio del contenido-->
+    <main id="wrap" class="col-12 mt-3 mb-5 justify-content-center align-items-center w-100 ">
+        <section id="informacion" class="col-11 d-grid h-200px w-80 mx-4 mb-5">
+            <!--Inicio slider-->
+            <div id="slider" class="col-11  w-100 h-25">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-slide="carousel" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/tienda-online.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/49bfadf4-6cb7-42c5-b4c7-f4c80948d240.jpeg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/anime-style.png' %}" class="d-block w-100" alt="...">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'images/gente ropa.png' %}" class="d-block w-100" alt="...">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'images/tienda ropa.png' %}" class="d-block w-100" alt="...">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'images/siluetasropa.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+    
+            </div>
+        
+            <!--Final slider slider-->
+            <div id="Mision" class="col-11 m-5">
+                <h2>Mision empresarial</h2>
+                <p class="fs-5 fw-semibold">Atender las necesidades del
+                    cliente brindándole los
+                    mejores productos del
+                    mercado.</p>
+            </div>
+            
+            <div id="Vision" class="h-25 col-11 m-5">
+                <h2>Vision empresarial </h2>
+                <p class="fs-5 fw-semibold">Nuestra visión es ser
+                    reconocidos nacional e
+                    internacionalmente por la
+                    buena calidad y servicio que
+                    le brindamos a nuestros
+                    clientes.</p>
+            </div>
+            <a href="{% url 'inicio' %}" class="text-white text-center rounded-pill bg-black" id="explorartienda">
+                Explorar la tienda
+            </a>
+
+        </section>
+        <hr>
+        <section id="accion" class="col-12 w-100 h-auto"></section>
+            <div class="col-12 mb-5" id="info">
+                <h1 class="text-center text-black fw-bold">¿Que puedes hacer en este lugar?</h1>
+            </div>
+            <article class="articulos col-12 h-50 row align-items-center border-4 
+            border-bottom border-warning" id="article1">
+                <div class="text-ani texto col-6 " id="text-ani1">
+                    <p id="text-informacion" class="text-center text-capitalize fs-2 fw-light mx-3 h-100">
+                        En este sitio web podrás comprar las mejores prendas de vestir de tus marcas favoritas
+                        en un solo lugar.
+                        ¡visitanos y descubre nuevas marcas y compra al mejor precio tu ropa favorita!
+                    </p>
+                </div>
+                <div class="col-6 ">
+                    <img src="{% static 'images/tienda-ropaanimada.png' %}" alt="" class="d-block mx-auto rounded w-100 ">
+                </div>
+            </article>
+            <article class="articulos row col-12 h-50 align-items-center" id="article2">
+                <div class="col-6">
+                    <img src="{% static 'images/person-browsing-items-online.png' %}" alt="" class="d-block mx-auto rounded w-100">
+                </div>
+                <div class="text-ani col-6" >
+                    <p class="text-center text-capitalize fs-2 fw-light mx-3">
+                        !Somos los mayores distribuidores de ropa a nivel Bogotá, puedes confiar en nosotros para
+                        vestir alegremente y estar a la moda.!
+                    </p>
+                </div>
+            </article>
+            <article class="articulos row col-12 h-50 align-items-center border-4 border-top border-info" id="article3">
+                <div class="text-ani col-6" id="text-ani3">
+                    <p  class="text-center text-capitalize fs-2 fw-light mx-3">¡Tus pantalones, camisetas, tenis, bermudas, chaquetas,
+                        ropa interior, calcetines y moda en general, la encuentras aquí al mejor precio del mercado.¡</p>
+                </div>
+                <div class="col-6">
+                    <img src="{% static 'images/person-using-currency-exchange-app.png' %}" alt="" class="d-block mx-auto rounded w-100">
+                </div>
+            </article>
+        </section>
+    </main>
+    <!--Final del contenido-->
+    <!---Inicio del footer-->
+    <footer class="col-12 d-flex justify-content-center align-items-center w-100">
+        <ul class="row col-9 text-center mt-2">
+            <li class="col"><a href="{% url 'index' %}">AYUDA</a></li>
+            <li class="col"><a href="{% url 'index' %}">CONTACTANOS</a></li>
+            <li class="col"><a href="#accion">ACERCA DE NOSOTROS</a></li>
+        </ul>
+    </footer>
+    <!--Final del footer-->
+    <script src="{% static 'Bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
+    <script src="{% static 'js/slider.js' %}"></script>
+</body>
+</html>

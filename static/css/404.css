@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Michroma;
+    src: url(../Fonts/Michroma-Regular);
+}
+@font-face {
+    font-family: Tiltneon;
+    src: url(../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    src: url(../Fonts/Ubuntu-Regular);
+}
+#imagen-404{
+    height: 35em;
+}
+h1{
+   font-family: Montserrat;
+}

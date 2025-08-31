@@ -1,0 +1,71 @@
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url("../fonts/websymbols-regular-webfont.eot");
+    src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../fonts/websymbols-regular-webfont.woff") format('woff'),
+        url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    src: url(../Fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+    font-family: TiltNeon;
+    src: url(../Fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf);
+}
+@font-face {
+    font-family: Michroma;
+    src: url(../Fonts/Michroma-Regular.ttf);
+}
+:root{
+    --Ubuntu:Ubuntu;
+    --TiltNeon:TiltNeon;
+    --Michroma:Michroma;
+    --fuenteprincipal:Montserrat;
+    --negro:#131414;
+    --gris:#cecdba;
+    --azul:#0063bb;
+    --naranja:#FF8D1A;
+    --blanco:rgb(241, 236, 236);
+}
+
+.cajas-pqrs{
+    width: 70%;
+}
+
+.campo-pqrs{
+    border: 3px solid var(--azul);
+    text-align: center;
+
+    font-size: 25px;
+}
+
+.btn-row{
+    margin-top: 70px;
+}
+
+section{
+    max-width: 100.9%;
+    width: 100.9%;
+}
+
+.boton-enviar-pqrs{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background: linear-gradient(45deg, var(--naranja), var(--azul));
+    color: var(--blanco);
+    border-radius: 20px;
+}
+
+
+footer{
+    margin-top: 91px;
+}

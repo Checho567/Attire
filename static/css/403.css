@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+.img-403{
+    height: 38em;
+    width: 70em;
+}
+
+p{
+    font-family: Montserrat;
+}

@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styleregistro.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/ATTIRE FAVICON.png' %}" type="image/x-icon">
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <div class="marca">
+        <img src="{% static 'images/logo.png' %}" alt="Logo Attire">
+    </div>
+    <div class="divform">
+        <div class="registro">
+            <div class="formRegistro">
+                <form id="registro" action="{% url 'registro' %}" method="post">
+                    {% csrf_token %}
+                    <select name="rol" id="rol" hidden>
+                    </select>
+                    <div class="datos">
+                        <div class="InfoPers">
+                            <div class="tipo_doc">
+                                <select name="type_document" id="tipo_doc">
+                                    {% for tip in tipos %}
+                                        <option value="{{ tip.id }}">{{ tip.type_doc }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="doc_cliente">
+                                <input  type="number"
+                                        name="number_document"
+                                        id="number_document" 
+                                        pattern="^[0-9]{5,16}$"
+                                        placeholder="Numero de documento"
+                                        title="Solo se permiten numeros entre 0 y 9 sin puntuacion"
+                                        required>
+                            </div>
+                            <div class="nom_cliente">
+                                <input  type="text" 
+                                        name="first_name"
+                                        id="nom_cliente"
+                                        pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]{2,40}$" 
+                                        placeholder="Nombre"
+                                        title="Solo se permiten letras mayusculas y minusculas" 
+                                        required>
+                            </div>
+                            <div class="apell_cliente">
+                                <input  type="text"
+                                        name="last_name"
+                                        id="apell_cliente"
+                                        pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]{2,30}$" 
+                                        placeholder="Apellidos"
+                                        title="Solo se permiten letras mayusculas y minusculas" 
+                                        required>
+                            </div>
+                        </div>
+                        <div class="InfoCont">
+                            <div class="nom_usuario">
+                                <input  type="text" 
+                                        name="username"
+                                        id="username"
+                                        pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]{2,40}$"
+                                        placeholder="Nombre de usuario"
+                                        title="Solo se permiten letras mayusculas y minusculas" 
+                                        required>
+                            </div>
+                            <div class="email_cliente">
+                                <input  type="email" 
+                                        name="email"
+                                        id="email_cliente"
+                                        pattern="^[a-zA-Z0-9._%+-áéíóúÁÉÍÓÚüÜñÑ]+@[a-zA-Z0-9.-áéíóúÁÉÍÓÚüÜñÑ\s]+\.[a-zA-Z]{2,}$"
+                                        placeholder="Correo electronico"
+                                        title="El correo debe finalizar con un dominio como .com" 
+                                        required>
+                            </div>
+                            <div class="tel_cliente">
+                                <input  type="number" 
+                                        name="phone"
+                                        id="tel_cliente" 
+                                        pattern="^[0-9]{6,15}"
+                                        placeholder="Telefono"
+                                        title="Solo se permiten numeros entre 0 y 9 sin puntuacion"
+                                        required>
+                            </div>
+                            <div class="clave_ini_cliente">
+                                <input  type="password" 
+                                        name="password"
+                                        id="clave_ini_cliente"
+                                        placeholder="Contraseña"
+                                        title="La contraseña debe tener minimo 8 caracteres entre los que debe incluir: una letra minuscula, una letra mayuscula y un caracter especial como @ o $"
+                                        required>
+                            </div>
+                            <!-- <div class="clave_conf_cliente">
+                                <input  type="password" 
+                                        name="confirm_password"
+                                        id="clave_conf_cliente"
+                                        placeholder="Confirmar contraseña" 
+                                        required>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div id="boton">
+                        <input type="submit" name="btnregistro" value="Registrarse" class="button">
+                    </div>
+                    <p>¿Ya tienes una cuenta? Inicia sesion <a href="{% url 'login' %}">aquí</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'Bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>

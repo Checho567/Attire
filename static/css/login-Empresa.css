@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url("../fonts/websymbols-regular-webfont.eot");
+    src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../fonts/websymbols-regular-webfont.woff") format('woff'),
+        url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+:root{
+    --fuenteprincipal:Montserrat;
+    --negro:#131414;
+    --gris:#cecdba;
+    --azul:#0063bb;
+    --naranja:#FF8D1A;
+}
+body{
+    background-image: url(../IMG/businnes.png);
+}
+#formulario{
+    height: 745px;
+    background-color: white;
+    position: relative;
+    top: 25px;
+    box-shadow: 10px 10px 5px 3px #24282b,;
+}
+label{
+    font-family: var(--fuenteprincipal);
+    font-weight: 700;
+}
+h1{
+    font-family: var(--fuenteprincipal);
+}
+hr{
+    color: var(--naranja);
+    font-weight: bold;
+}
+form{
+    margin-top: -115px;
+}
+
+.alerta{
+    text-align: center;
+    color: rgb(223, 35, 35);
+    font-weight: bold;
+}
+.sucess{
+    text-align: center;
+    color: #0063bb;
+    font-weight: bold;
+}

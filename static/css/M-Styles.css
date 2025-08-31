@@ -1,0 +1,77 @@
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url("../fonts/websymbols-regular-webfont.eot");
+    src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../fonts/websymbols-regular-webfont.woff") format('woff'),
+        url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+:root{
+    --fuenteprincipal:Montserrat;
+    --negro:#131414;
+    --gris:#cecdba;
+    --azul:#0063bb;
+    --naranja:#FF8D1A;
+    --blanco:rgb(255, 255, 255);
+}
+aside{
+    background-color: var(--azul);
+}
+header{
+    background-color: var(--naranja);
+    height: 4em;
+}
+a{
+    text-decoration: none;
+    font-family: var(--fuenteprincipal);
+}
+p{
+    font-family: var(--fuenteprincipal);
+}
+hr{
+    color: white;
+}
+main{
+    height: 633px;
+    min-height: 633px;
+}
+.cajas_info{
+    height: 150px;
+    line-height: 150px;
+    cursor: pointer;
+}
+.enlaces{
+    transition: all 400ms;
+}
+.enlaces:hover{
+    margin-left: 4rem;
+    transform: scale(1.1);
+}
+footer{
+    min-height: 100px;
+    margin-top: auto;
+    background-color: var(--negro);
+    color: var(--azul);
+    font-size: 1.3em;
+}
+footer > ul > li{
+    cursor: pointer;
+    font-family: var(--fuenteprincipal);
+    transition: all 400ms;
+}
+footer > ul > li:hover{
+    color: var(--naranja);
+    text-shadow: 0px 0px 10px var(--naranja);
+}
+
+
+footer ul{
+    list-style: none;
+}

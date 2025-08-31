@@ -1,0 +1,31 @@
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="{% static 'css/stylelogin.css' %}">
+            <link rel="shortcut icon" href="{% static 'images/ATTIRE FAVICON.png' %}" type="image/x-icon">
+            <title>Iniciar Sesion</title>
+        </head>
+        <body>
+            <div class="marca"> 
+                <img src="{% static 'images/logo.png' %}" alt="Logo Attire"> 
+            </div>
+            <div class="login"> 
+                <div class="form">
+                    <form id="login" method="POST" action="{% url 'auth' %}">
+                        {% csrf_token %}
+                        <input type="text" name="username" id="User" placeholder="Usuario" autofocus tabindex="1" required title="Debe digitar un nombre de usuario registrado">
+                        <input type="password" name="password" id="Password" placeholder="Contraseña"
+                        tabindex="2" required title="Debe digitar la contraseña asignada a la cuenta"> 
+                        <input type="submit" name="btnLogin" value="Iniciar Sesion" class="button">
+                        <hr>
+                        <a href="{% url 'registro'%}" class="btn-dlg">Crear cuenta nueva</a>
+                    </form>
+                </div>
+            </div>
+            <script src="{% static 'Bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        </body>
+    </html>
